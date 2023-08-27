@@ -1,4 +1,4 @@
-module github.com/mdempsky/go114-fuzz-build
+module github.com/sacheendra/go-protobuf-fuzz-build
 
 go 1.14
 
