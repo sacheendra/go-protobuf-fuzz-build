@@ -144,8 +144,8 @@ import (
 // #include <stdint.h>
 import "C"
 
-//export LLVMFuzzerTestOneInput
-func LLVMFuzzerTestOneInput(data *C.char, size C.size_t) C.int {
+//export LPBMutatorTestOneInput
+func LPBMutatorTestOneInput(data *C.char, size C.size_t) C.int {
 	// TODO(mdempsky): Use unsafe.Slice once golang.org/issue/19367 is accepted.
 	s := (*[1<<30]byte)(unsafe.Pointer(data))[:size:size]
 	target.{{.Func}}(s)
